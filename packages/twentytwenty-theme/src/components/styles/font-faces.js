@@ -16,7 +16,7 @@ const FontFace = ({ state }) => {
   switch (state.theme.fontSets) {
     case "us-ascii":
       fonts = [InterMediumUS, InterSemiBoldUS, InterBoldUS];
-      fontDisplay = "block";
+      fontDisplay = "swap";
       break;
     case "latin":
       fonts = [InterMediumLatin, InterSemiBoldLatin, InterBoldLatin];
