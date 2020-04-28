@@ -120,9 +120,9 @@ export default ({ packages }): ReturnType<Koa["callback"]> => {
           : extractor.getScriptTags();
 
       // Add mutations to our scripts.
-      // frontity.script = `<script id="__FRONTITY_CONNECT_STATE__" type="application/json">${htmlescape(
-      //   getSnapshot(store.state)
-      // )}</script>\n${frontity.script}`;
+      frontity.script = `<script id="__FRONTITY_CONNECT_STATE__" type="application/json">${htmlescape(
+        getSnapshot(store.state)
+      )}</script>\n${frontity.script}`;
     } else {
       // No client chunks: no scripts. Just do SSR. Use renderToStaticMarkup
       // because no hydratation will happen in the client.
