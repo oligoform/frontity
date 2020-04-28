@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 import React from "react";
 import { hydrate } from "react-dom";
 import { loadableReady } from "@loadable/component";
@@ -6,7 +7,7 @@ import App from "../app";
 import createStore from "./store";
 
 export default async ({ packages }) => {
-  if (typeof window !== "undefined" && window["Proxy"]) {
+  if (typeof window !== "undefined" && window["Proxy"] && false) {
     // Hydrate Connect state.
     const stateElement = document.getElementById("__FRONTITY_CONNECT_STATE__");
     if (!stateElement) {
