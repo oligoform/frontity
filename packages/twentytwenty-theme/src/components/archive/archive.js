@@ -4,7 +4,7 @@ import Article from "../post/post-item";
 import ArchiveHeader from "./archive-header";
 import Pagination from "./archive-pagination";
 import PostSeparator from "../post/post-separator";
-import Post from "../post";
+// import Post from "../post";
 
 const Archive = ({ state, showExcerpt, showMedia }) => {
   // Get the data of the current list.
@@ -16,7 +16,7 @@ const Archive = ({ state, showExcerpt, showMedia }) => {
   const _showExcerpt = showExcerpt || !state.theme.showAllContentOnArchive;
 
   useEffect(() => {
-    Post.preload();
+    // Post.preload();
   }, []);
 
   return (
